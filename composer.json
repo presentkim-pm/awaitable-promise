@@ -1,0 +1,22 @@
+{
+  "name": "presentkim/awaitable-promise",
+  "description": "Provides a wrapper class for Promise with Generator exporting and register Throwable handlers for PocketMine-MP",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "pocketmine/pocketmine-mp": "^5.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "kim\\present\\awaitablepromise\\": [
+        "src/kim/present/awaitablepromise"
+      ]
+    }
+  },
+  "extra": {
+    "virion": {
+      "spec": "3.0",
+      "namespace-root": "kim\\present\\awaitablepromise"
+    }
+  }
+}
