@@ -1,22 +1,31 @@
 {
   "name": "presentkim/awaitable-promise",
-  "description": "Provides a wrapper class for Promise with Generator exporting and register Throwable handlers for PocketMine-MP",
+  "description": "Provides a wrapper class for Promise with Generator exporting and Throwable handlers for axolotl-pm/PocketMine-MP",
   "type": "library",
   "license": "MIT",
   "require": {
-    "pocketmine/pocketmine-mp": "^5.0.0"
+    "php": "^8.4",
+    "pocketmine/pocketmine-mp": "^5.0",
+    "sof3/await-generator": "^3.6.1"
+  },
+  "require-dev": {
+    "axolotl-pm/pocketmine-mp": "^5.51",
+    "phpunit/phpunit": "^12.0"
   },
   "autoload": {
     "psr-4": {
-      "kim\\present\\awaitablepromise\\": [
-        "src/kim/present/awaitablepromise"
-      ]
+      "kim\\present\\awaitablepromise\\": "src/kim/present/awaitablepromise/"
     }
   },
-  "extra": {
-    "virion": {
-      "spec": "3.0",
-      "namespace-root": "kim\\present\\awaitablepromise"
+  "autoload-dev": {
+    "psr-4": {
+      "kim\\present\\awaitablepromise\\tests\\": "tests/"
     }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "sort-packages": true
   }
 }
